@@ -1,11 +1,10 @@
 class RefereeRequest
   include ActiveModel::Validations
-  include ActiveModel::Conversation
+  include ActiveModel::Conversion
   extend ActiveModel::Naming
 
   attr_accessor :name, :email
-
-  validates_presence_of :name
+  validates_presence_of :name, :email
   validates_format_of :email, :with => /^[-a-z0-9_+\.]+\@([-a-z0-9]+\.)+[a-z0-9]{2,4}$/i
 
 

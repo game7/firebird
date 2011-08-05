@@ -1,0 +1,10 @@
+<h3>New Referee Request</h3>
+<%= semantic_form_for @referee_request do |form| %>
+  <%= form.inputs do %>
+    <%= form.input :name %>
+    <%= form.input :email %>
+  <% end %>
+  <%= form.buttons do %>
+    <%= form.commit_button %>
+  <% end %>
+<% end %>
