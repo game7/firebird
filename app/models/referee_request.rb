@@ -1,4 +1,4 @@
-class RefereeRequestForm
+class RefereeRequest
   include ActiveModel::Validations
   include ActiveModel::Conversation
   extend ActiveModel::Naming
