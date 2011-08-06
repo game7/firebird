@@ -8,6 +8,30 @@ gem 'rails', '3.0.5'
 gem 'sqlite3'
 gem 'formtastic', '~> 1.1.0'
 
+group :test do
+
+  gem 'rspec', '>= 2.0.1'
+  gem 'rspec-rails', '>= 2.0.1'
+  gem "shoulda"
+  #gem "remarkable_mongoid", ">= 0.5.0"
+  #gem 'machinist_mongo', :require => 'machinist/mongoid'
+  gem 'remarkable'
+  gem 'machinist'#, '>= 2.0.0.beta2'
+  gem 'factory_girl'
+  gem 'sham'
+  gem 'faker'
+  gem 'webrat'
+  gem 'cucumber-rails'
+  gem 'cucumber'
+  gem 'capybara'
+  gem 'launchy'   # so we can use : Then show me the page
+  # Autotest
+  gem 'autotest'
+  gem 'autotest-rails'
+  gem 'autotest-notification'
+
+end
+
 # Use unicorn as the web server
 # gem 'unicorn'
 
