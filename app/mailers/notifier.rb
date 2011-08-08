@@ -3,6 +3,8 @@ class Notifier < ActionMailer::Base
 
   def referee_request(request)
     @request = request
-    mail(:to => 'cmwoodall@yahoo.com', :subject => 'DYHA Referee Request')
+    mail(:to => 'cmwoodall@game7.net', 
+          :cc => 'john.kosobud@dyha.org',
+          :subject => 'DYHA Referee Request')
   end
 end
