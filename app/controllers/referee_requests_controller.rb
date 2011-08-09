@@ -1,4 +1,6 @@
 class RefereeRequestsController < ApplicationController
+  
+  before_filter :set_location_options
 
   def index
   end
@@ -17,6 +19,12 @@ class RefereeRequestsController < ApplicationController
       render :action => "new"
     end
   end
+
+  private
+
+    def set_location_options
+      @location_options = %w[oceanside_ice_arena arcadia_ice].collect{|x| x.humanize.titleize}
+    end
 
 
 end

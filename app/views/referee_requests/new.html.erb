@@ -7,7 +7,7 @@
     <%= form.input :team_level %>
     <%= form.input :game_date %>
     <%= form.input :game_time %>
-    <%= form.input :game_location %>
+    <%= form.input :game_location, :as => :select, :collection => @location_options %>
   <% end %>
   <%= form.buttons do %>
     <%= form.commit_button %>
