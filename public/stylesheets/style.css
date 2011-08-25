@@ -1,8 +1,13 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 12px;
+    font-size: 10pt;
+}
+ul.square {
+    list-style-type: square; 
+    padding-left: 20px; 
+    margin-bottom: 20px;
 }
 li {
-    list-style-type: square;  
+    margin-left: 0px;
 }
