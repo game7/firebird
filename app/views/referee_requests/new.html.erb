@@ -13,7 +13,9 @@
     <%= form.input :team_level %>
     <%= form.input :game_date %>
     <%= form.input :game_time %>
-    <%= form.input :game_location, :as => :select, :collection => @location_options %>
+    <%= form.input :game_location, :as => :radio, :collection => @location_options %>
+    <%= form.input :on_ice_officials, :as => :radio, :collection => %w[2 3 4], :label => "Number of on-ice officials needed" %>
+    <%= form.input :scorekeeper, :as => :radio, :collection => %w[Yes No], :label => "I need a scorekeeper" %>
   <% end %>
   <%= form.buttons do %>
     <%= form.commit_button %>
