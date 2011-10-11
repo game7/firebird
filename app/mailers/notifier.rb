@@ -4,7 +4,7 @@ class Notifier < ActionMailer::Base
   def referee_request(request)
     @request = request
     mail(:to => 'timeclass@aol.com', 
-          :cc => 'john.kosobud@dyha.org,bob.juby@dyha.org,jacque.gomez@dyha.org,online.services@dyha.org',
+          :cc => 'refs@dyha.org',
           :subject => 'DYHA Referee Request')
   end
   
