@@ -19,7 +19,7 @@
     <%= form.input :amount %>
     <%= form.input :payable_to %>
     <%= form.input :delivery_method, :as => :radio, :collection => ["Pick up at Oceanside", "Mail it please"] %>
-    <%= form.input :mailing_address, :as => :text %>
+    <%= form.input :mailing_address, :as => :text, :input_html => { :rows => 4, :style => 'width: 450px;' } %>
   <% end %>
   <%= form.buttons do %>
     <%= form.commit_button %>
