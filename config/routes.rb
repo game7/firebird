@@ -1,6 +1,7 @@
 Firebird::Application.routes.draw do
   
   resources :referee_requests, :only => [:index, :create, :new]
+  resources :check_requests, :only => [:index, :create, :new]
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

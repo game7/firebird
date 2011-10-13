@@ -7,7 +7,6 @@ class RefereeRequestsController < ApplicationController
 
   def new
     @referee_request = RefereeRequest.new
-    puts @referee_request.class
   end
 
   def create

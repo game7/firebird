@@ -1,0 +1,27 @@
+<h3>New Check Request</h3>
+<ul class="square">
+  <li>Check requests are processed each Friday with payments dispersed the following week.</li>
+  <li>Receipts must accompany each check request for verification.</li>
+  <li>Upon submittal you shall receive a confirmation mail with further instructions.</li>
+  <li>Be sure to complete each of the fields below accurately.</li> 
+  <li>If you need immediate assistance please email jacqui.gomez@dyha.org</li>
+</ul> 
+<%= semantic_form_for @check_request do |form| %>
+  <%= form.inputs do %>
+    <%= form.input :first %>
+	<%= form.input :last %>
+    <%= form.input :email %>
+    <%= form.input :phone_number %>
+    <%= form.input :team_name %>
+    <%= form.input :team_level %>
+    <%= form.input :date_needed %>
+    <%= form.input :team_expense, :as => :radio, :collection => %w{Yes No} %>
+    <%= form.input :amount %>
+    <%= form.input :payable_to %>
+    <%= form.input :delivery_method, :as => :radio, :collection => ["Pick up at Oceanside", "Mail it please"] %>
+    <%= form.input :mailing_address, :as => :text %>
+  <% end %>
+  <%= form.buttons do %>
+    <%= form.commit_button %>
+  <% end %>
+<% end %>
