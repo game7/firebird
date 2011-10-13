@@ -6,7 +6,7 @@ class Notifier < ActionMailer::Base
     @request = request
     mail(:to => 'timeclass@aol.com', 
           :cc => 'refs@dyha.org',
-          :subject => "DYHA Referee Request ##{key}")
+          :subject => "DYHA Referee Request ##{@key}")
   end
   
   def check_request(request)
