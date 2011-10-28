@@ -1,5 +1,8 @@
 Firebird::Application.routes.draw do
   
+  get "home/index"
+  root :to => "home#index" 
+
   resources :referee_requests, :only => [:index, :create, :new]
   resources :check_requests, :only => [:index, :create, :new]
 
