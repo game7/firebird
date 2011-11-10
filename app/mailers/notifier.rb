@@ -12,11 +12,8 @@ class Notifier < ActionMailer::Base
   def check_request(request)
     @key = random_key
     @request = request
-    #mail(:to => 'cmwoodall@game7.net',
-    #      :cc => 'cmwoodall@yahoo.com',
-    #      :subject => "DYHA Check Request - #{@key}")
     mail(:to => request.email,
-          :bcc => 'jacque.gomez@dyha.org, cmwoodall@game7.net, john.kosobud@dyha.org, bob.juby@dyha.org',
+          :bcc => 'checkrequest@dyha.org',
           :subject => "[TEST] DYHA Check Request ##{@key}",
           :template_name => "check_request_confirmation")
   end
