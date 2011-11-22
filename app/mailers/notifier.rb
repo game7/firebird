@@ -14,7 +14,7 @@ class Notifier < ActionMailer::Base
     @request = request
     mail(:to => request.email,
           :bcc => 'checkrequest@dyha.org',
-          :subject => "[TEST] DYHA Check Request ##{@key}",
+          :subject => "DYHA Check Request ##{@key}",
           :template_name => "check_request_confirmation")
   end
   
