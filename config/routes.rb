@@ -1,10 +1,11 @@
 Firebird::Application.routes.draw do
-  
+
   get "home/index"
   root :to => "home#index" 
 
   resources :referee_requests, :only => [:index, :create, :new]
   resources :check_requests, :only => [:index, :create, :new]
+  resources :free_agents, :only => [:index, :create, :new]
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

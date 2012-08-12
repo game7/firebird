@@ -1,0 +1,19 @@
+<h3>New Free Agent Request</h3>
+<ul class="square">
+  <li>Free Agents that are new to the OAHL must participate in an Evaluation Session.  You may choose a session as part of the form below.</li>
+  <li>Please be sure to complete each of the fields below accurately.</li> 
+  <li>If you need assistance please email <a href="mailto:crystal.koontz@oceansideicearena.net?subject=OAHL%20Free%20Agent">crystal.koontz@oceansideicearena.net</a></li>
+</ul> 
+<%= semantic_form_for @free_agent do |form| %>
+  <%= form.inputs do %>
+    <%= form.input :name %>
+    <%= form.input :email %>
+    <%= form.input :phone_number %>
+    <%= form.input :position, :as => :radio, :collection => FreeAgent.POSITIONS %>
+    <%= form.input :evaluation_session, :as => :radio, :collection => ["August 27 @ 10:00p", "September 5 @ 9:15p"] %>
+    <%= form.input :hockey_bio, :as => :text, :input_html => { :rows => 4, :style => 'width: 350px;' } %>
+  <% end %>
+  <%= form.buttons do %>
+    <%= form.commit_button %>
+  <% end %>
+<% end %>
