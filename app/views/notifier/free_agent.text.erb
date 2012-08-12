@@ -3,15 +3,15 @@ Free Agent Request
 --------------------------------------------------------
 
 Submitted By: <%= @request.name %>
-Reply To: <a mailto:"<%= @request.email %>"><%= @request.email %></a>
-Phone: <%= @request.phone%>
+Reply To: <a href="mailto:<%= @request.email %>?subject=OAHL%20Free%20Agent%20Request"><%= @request.email %></a>
+Phone: <%= @request.phone_number %>
 
 Position: <%= @request.position %>
 Evaluation: <%= @request.evaluation_session %>
 
 Hockey Bio: 
 
-<%= @request.game_date %>
+<%= @request.hockey_bio %>
 
 --------------------------------------------------------
 Submitted online at oceansideicearena.net
