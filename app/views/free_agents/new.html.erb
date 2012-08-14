@@ -8,10 +8,10 @@
     <%= form.input :name %>
     <%= form.input :email %>
     <%= form.input :phone_number %>
-    <%= form.input :position, :as => :radio, :collection => FreeAgent.POSITIONS %>
+    <%= form.input :position, :as => :radio_buttons, :collection => FreeAgent.POSITIONS %>
     <%= form.input :programs, :as => :check_boxes, :collection => FreeAgent.PROGRAMS %>
-    <%= form.input :intensity, :as => :radio, :collection => FreeAgent.INTENSITIES %>
-    <%= form.input :evaluation_session, :as => :radio, :collection => ["August 27 @ 10:00p", "September 5 @ 9:15p"] %>
+    <%= form.input :intensity, :as => :radio_buttons, :collection => FreeAgent.INTENSITIES %>
+    <%= form.input :evaluation_session, :as => :radio_buttons, :collection => ["August 27 @ 10:00p", "September 5 @ 9:15p"] %>
     <%= form.input :highest_level %>
     <%= form.button :submit %>
 <% end %>
