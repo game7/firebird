@@ -16,6 +16,15 @@ module Firebird
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
 
+    # Enable the asset pipeline
+    config.assets.enabled = true
+    
+    # fix heroku precompile issue as noted here: http://devcenter.heroku.com/articles/rails3x-asset-pipeline-cedar
+    config.assets.initialize_on_precompile = false
+
+    # Version of your assets, change this if you want to expire all your assets
+    config.assets.version = '1.3'      
+
     # Custom directories with classes and modules you want to be autoloadable.
     # config.autoload_paths += %W(#{config.root}/extras)
 
