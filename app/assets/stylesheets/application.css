@@ -2,3 +2,6 @@
 *= require_self
 *= require twitter/bootstrap
 */
+.help-block {
+  font-style: italic;
+}

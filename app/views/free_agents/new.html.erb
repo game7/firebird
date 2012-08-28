@@ -1,17 +1,13 @@
-<h3>New Free Agent Request</h3>
-<ul class="square">
-  <li>Free Agents that are new to the OAHL must participate in an Evaluation Session.  You may choose a session as part of the form below.</li>
-  <li>Please be sure to complete each of the fields below accurately.</li> 
-  <li>If you need assistance please email <a href="mailto:crystal.koontz@oceansideicearena.net?subject=OAHL%20Free%20Agent">crystal.koontz@oceansideicearena.net</a></li>
-</ul> 
+<br/>
+<h3>Adult Hockey Inquiry</h3>
+<br/>
+<p>Oceanside is always accepting new participants for our adult hockey programs. If you would like more information about Adult Hockey at OIA please complete and submit the brief questionnaire below.  After submitting the form we will contact you at our earliest convenience to discuss next steps</p>
 <%= simple_form_for @free_agent do |form| %>
     <%= form.input :name %>
-    <%= form.input :email %>
-    <%= form.input :phone_number %>
-    <%= form.input :position, :as => :radio_buttons, :collection => FreeAgent.POSITIONS %>
-    <%= form.input :programs, :as => :check_boxes, :collection => FreeAgent.PROGRAMS %>
-    <%= form.input :intensity, :as => :radio_buttons, :collection => FreeAgent.INTENSITIES %>
-    <%= form.input :evaluation_session, :as => :radio_buttons, :collection => ["August 27 @ 10:00p", "September 5 @ 9:15p"] %>
-    <%= form.input :highest_level %>
+    <%= form.input :email, :hint => 'So we can email you... we prefer this.'%>
+    <%= form.input :phone_number, :hint => 'So we can call you, in case your email is not effective' %>
+    <%= form.input :position, :as => :radio_buttons, :collection => FreeAgent.POSITIONS, :hint => 'Position that you prefer to play.' %>
+    <%= form.input :programs, :label => 'Programs of Interest', :as => :check_boxes, :hint => 'Please check all that apply.', :collection => FreeAgent.PROGRAMS %>
+    <%= form.input :highest_level_played, :as => :radio_buttons, :collection => FreeAgent.LEVELS_PLAYED, :hint => 'Please be honest... we just want to place you where you are comfortable'%>
     <%= form.button :submit %>
 <% end %>
