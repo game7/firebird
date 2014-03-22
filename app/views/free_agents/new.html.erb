@@ -5,9 +5,12 @@
 <%= simple_form_for @free_agent do |form| %>
     <%= form.input :name %>
     <%= form.input :email, :hint => 'So we can email you... we prefer this.'%>
-    <%= form.input :phone_number, :hint => 'So we can call you, in case your email is not effective' %>
+    <%= form.input :phone_number, :input_html => { :class =>  'input-medium'}, :hint => 'So we can call you, in case your email is not effective' %>
+    <%= form.input :age, :input_html => { :class =>  'input-mini'} %>
     <%= form.input :position, :as => :radio_buttons, :collection => FreeAgent.POSITIONS, :hint => 'Position that you prefer to play.' %>
     <%= form.input :programs, :label => 'Programs of Interest', :as => :check_boxes, :hint => 'Please check all that apply.', :collection => FreeAgent.PROGRAMS %>
     <%= form.input :highest_level_played, :as => :radio_buttons, :collection => FreeAgent.LEVELS_PLAYED, :hint => 'Please be honest... we just want to place you where you are comfortable'%>
-    <%= form.button :submit %>
+    <div class="form-actions">
+      <%= form.button :submit, 'Submit Form' %>
+    </div>
 <% end %>

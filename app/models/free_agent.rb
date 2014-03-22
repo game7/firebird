@@ -18,19 +18,15 @@ class FreeAgent
     PROGRAMS.collect{ |p| p.humanize }
   end
   
-  def self.DESIRED_INTENSITY_LEVELS
-    INTENSITIES
-  end
-  
   def self.LEVELS_PLAYED
     LEVELS_PLAYED
   end
   
   
   
-  attr_accessor :name, :email, :age, :phone_number, :position, :programs, :evaluation_session, :highest_level_played, :intensity
+  attr_accessor :name, :email, :age, :phone_number, :position, :programs,:highest_level_played
 
-  validates_presence_of :name, :email, :age, :phone_number, :position, :evaluation_session, :highest_level_played, :intensity
+  validates_presence_of :name, :email, :age, :phone_number, :position, :highest_level_played
   validates :age, :numericality => true
   validates_format_of :email, :with => /^[-a-z0-9_+\.]+\@([-a-z0-9]+\.)+[a-z0-9]{2,4}$/i
 

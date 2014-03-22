@@ -5,13 +5,11 @@ Free Agent Request
 Submitted By: <%= @request.name %>
 Reply To: <%= @request.email %>
 Phone: <%= @request.phone_number %>
+Age: <%= @request.age %>
 
 Position: <%= @request.position %>
-Evaluation: <%= @request.evaluation_session %>
-
-Hockey Bio: 
-
-<%= @request.hockey_bio %>
+Highest Level Played: <%= @request.highest_level_played %>
+Programs Interested: <%= @request.programs.join(', ') %>  
 
 --------------------------------------------------------
 Submitted online at oceansideicearena.net

@@ -12,6 +12,7 @@ class FreeAgentsController < ApplicationController
       Notifier.free_agent(@free_agent).deliver
       redirect_to free_agents_path, :notice => 'Free Agent Request has been submitted'
     else
+      @free_agent.errors.each{|e| puts e}
       render :action => "new"
     end    
   end
