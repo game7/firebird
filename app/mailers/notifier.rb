@@ -19,7 +19,7 @@ class Notifier < ActionMailer::Base
   end
   
   def free_agent(request)
-    to = "crystal.koontz@dyha.org, cmwoodall@game7.net"
+    to = "cmwoodall@game7.net"
     #to = "cmwoodall@game7.net"
     @request = request
     mail(:to => to,
