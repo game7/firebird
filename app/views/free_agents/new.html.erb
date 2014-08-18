@@ -5,11 +5,15 @@
 <%= simple_form_for @free_agent do |form| %>
     <%= form.input :name %>
     <%= form.input :email, :hint => 'So we can email you... we prefer this.'%>
-    <%= form.input :phone_number, :input_html => { :class =>  'input-medium'}, :hint => 'So we can call you, in case your email is not effective' %>
-    <%= form.input :age, :input_html => { :class =>  'input-mini'} %>
+    <%= form.input :phone_number, :input_html => { :class =>  'input-medium'}, :hint => 'So we can call you, in case email is not effective' %>
+    <%= form.input :date_of_birth, :as => :string, :input_html => { :class =>  'input-medium'} %>
     <%= form.input :position, :as => :radio_buttons, :collection => FreeAgent.POSITIONS, :hint => 'Position that you prefer to play.' %>
     <%= form.input :programs, :label => 'Programs of Interest', :as => :check_boxes, :hint => 'Please check all that apply.', :collection => FreeAgent.PROGRAMS %>
+    <%= form.input :skill_level, :as => :radio_buttons, :collection => FreeAgent.SKILL_LEVEL %>    
     <%= form.input :highest_level_played, :as => :radio_buttons, :collection => FreeAgent.LEVELS_PLAYED, :hint => 'Please be honest... we just want to place you where you are comfortable'%>
+    <%= form.input :last_competitive_team %>
+    <%= form.input :last_adult_league_team %>        
+    <%= form.input :goals, :label => 'Your Goals', :as => :check_boxes, :hint => 'Please check all that apply.', :collection => FreeAgent.GOALS %>    
     <div class="form-actions">
       <%= form.button :submit, 'Submit Form' %>
     </div>

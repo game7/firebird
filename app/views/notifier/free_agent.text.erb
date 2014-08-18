@@ -5,11 +5,15 @@ Free Agent Request
 Submitted By: <%= @request.name %>
 Reply To: <%= @request.email %>
 Phone: <%= @request.phone_number %>
-Age: <%= @request.age %>
+DOB: <%= @request.date_of_birth %>
 
 Position: <%= @request.position %>
 Highest Level Played: <%= @request.highest_level_played %>
+Skill Level: <%= @request.skill_level %>
+Last Competitive Team: <%= @request.last_competitive_team %>
+Last Adult League Team: <%= @request.last_adult_league_team %>
 Programs Interested: <%= @request.programs.join(', ') %>  
+Goals: <%= @request.goals.join(', ') %>  
 
 --------------------------------------------------------
 Submitted online at oceansideicearena.net

@@ -12,6 +12,8 @@ gem 'simple_form', :git => 'git://github.com/plataformatec/simple_form.git'
 gem "less-rails-bootstrap"
 gem 'therubyracer', :platform => :ruby
 
+gem 'validates_timeliness', '~> 3.0'
+
 group :test do
 
   gem 'rspec', '>= 2.0.1'
